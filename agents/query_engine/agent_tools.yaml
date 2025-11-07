@@ -1,0 +1,25 @@
+tools:
+  - name: black_friday_sources
+    description: >-
+      聚合 Amazon 与 TikTok 黑五趋势数据，输出往年爆款、核心消费人群及价位段信息，
+      用于支持跨境选品与内容策划。
+    module: tools.black_friday_sources
+    class: BlackFridaySourcesTool
+    callable: fetch_trends
+    parameters:
+      platform:
+        type: string
+        required: false
+        description: 仅查询指定平台（"amazon" 或 "tiktok"）。
+      category:
+        type: string
+        required: false
+        description: 限定某个品类的趋势样本，按内部标签匹配。
+      limit:
+        type: integer
+        required: false
+        description: 限定返回的趋势样本数量。
+      include_platform_field:
+        type: boolean
+        required: false
+        description: 是否在结果中保留 platform 字段，默认为 true。
