@@ -4,17 +4,27 @@
 """
 
 from .search import (
-    TavilyNewsAgency, 
-    SearchResult, 
-    TavilyResponse, 
+    TavilyNewsAgency,
+    SearchResult,
+    TavilyResponse,
     ImageResult,
     print_response_summary
 )
+from tools.black_friday_sources import (
+    BlackFridaySourcesTool,
+    BlackFridayTrendRecord,
+    AmazonTrendClient,
+    TikTokTrendClient,
+)
 
 __all__ = [
-    "TavilyNewsAgency", 
-    "SearchResult", 
-    "TavilyResponse", 
+    "TavilyNewsAgency",
+    "SearchResult",
+    "TavilyResponse",
     "ImageResult",
-    "print_response_summary"
+    "print_response_summary",
+    "BlackFridaySourcesTool",
+    "BlackFridayTrendRecord",
+    "AmazonTrendClient",
+    "TikTokTrendClient",
 ]
